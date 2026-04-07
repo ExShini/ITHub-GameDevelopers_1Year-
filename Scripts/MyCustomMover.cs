@@ -8,7 +8,7 @@ public class MyCustomMover : MonoBehaviour
     public KeyCode RightKey;
 
     [Space]
-    public float Speed;
+    public float Power;
     public float RotationSpeed;
     public bool UseGravity = true; // Включение/выключение гравитации через инспектор
 
@@ -35,11 +35,11 @@ public class MyCustomMover : MonoBehaviour
     {
         if (Input.GetKey(ForwardKey))
         {
-            _rigidbody.AddForce(transform.forward * Speed, ForceMode.Acceleration);
+            _rigidbody.AddForce(transform.forward * Power, ForceMode.Acceleration);
         }
         else if (Input.GetKey(BackwardKey))
         {
-            _rigidbody.AddForce(-transform.forward * Speed, ForceMode.Acceleration);
+            _rigidbody.AddForce(-transform.forward * Power, ForceMode.Acceleration);
         }
 
         // Вращение объекта
