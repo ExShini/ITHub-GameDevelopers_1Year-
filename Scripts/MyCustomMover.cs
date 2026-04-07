@@ -26,8 +26,6 @@ public class MyCustomMover : MonoBehaviour
         // Настраиваем Rigidbody для движения через физику
         _rigidbody.useGravity = UseGravity;
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-        _rigidbody.linearDamping = 5f; // Добавляем сопротивление для более плавного движения
-        _rigidbody.angularDamping = 10f;
     }
 
     // Update is called once per frame
